@@ -34,27 +34,6 @@ Energy
 Length (seconds)
 Popularity
 
-##  Folder Structure
-
-
-Energy
-Length (seconds)
-Popularity
-
-
-##  How to Run
-
-1. Clone the repo  
-   `git clone https://github.com/MBengochea/Stairway-to-success.git`
-
-2. Install dependencies  
-   `pip install -r requirements.txt`
-
-3. Open the notebook  
-   `jupyter notebook notebooks/02_figures.ipynb`
-
-4. Run SQL queries using your preferred SQL engine
-
 ##  Dataset
 
 Source: `top50.csv` from Spotify top tracks  
