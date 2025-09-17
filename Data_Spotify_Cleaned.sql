@@ -114,7 +114,7 @@ VALUES
 (48, 'call you mine', 88, 70, 218, 14),
 (49, 'cross me (feat_ chance the rapper & pnb rock)', 82, 79, 206, 4);
 
--- 4. Insert Traks_to_artists
+-- 4. Insert Tracks_to_artists
 INSERT INTO Traks_to_artists (id, Artist_ID, Track_ID)
 VALUES
 (1, 1, 1),
