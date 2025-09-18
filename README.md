@@ -136,28 +136,28 @@ Scalability: Ready for integration with SQL or visualization pipelines
 - Summary Report
 
 Key Findings:
-Genres like rap, reggaeton flow and dance pop dominate popularity
-High-energy tracks correlate with shorter lengths in some genres.
-Artists like Ed Sheeran and J Balvin appear across multiple genres, that means an artist can be successful in different genres.
-Business Implication: Emerging artists can optimize track structure and genre alignment to improve streaming performance.
+.- Genres like rap, reggaeton flow and dance pop dominate popularity
+.- High-energy tracks correlate with shorter lengths in some genres.
+.- Artists like Ed Sheeran and J Balvin appear across multiple genres, that means an artist can be successful in different genres.
+.- Business Implication: Emerging artists can optimize track structure and genre alignment to improve streaming performance.
 
 
 
 **Business Implication:**
 Strategies based on Analysis
 
-Genre Positioning Focus on genres with high average popularity: dance pop, reggaeton flow, and latin consistently outperform others.
-Align your sound with these genres or blend elements to increase discoverability.
-Energy Optimization Tracks with energy scores above 70 dominate top positions.
-High-energy songs tend to be shorter (180–220 seconds), which aligns with listener retention patterns.
-Track Structure Use a medium-length format (3–4 minutes) with dynamic transitions.
-Avoid overly long intros or outros—streaming platforms reward immediate engagement.
-Artist Visibility Collaborations with artists across genres (e.g., J Balvin, Ed Sheeran) increase reach.
-Maintain consistent genre tagging to build algorithmic identity.
-Data Discipline Track performance metrics weekly: popularity, skip rate, completion rate.
-Use SQL or Python dashboards to monitor trends and adjust releases accordingly.
-Final Advice “Treat your music like a product: genre is your market, energy is your packaging, and popularity is your conversion rate.”
-Build with intention, measure with precision, and evolve with feedback.
+.- Genre Positioning Focus on genres with high average popularity: dance pop, reggaeton flow, and latin consistently outperform others. 
+.- Align your sound with these genres or blend elements to increase discoverability.
+.- Energy Optimization Tracks with energy scores above 70 dominate top positions.
+.- High-energy songs tend to be shorter (180–220 seconds), which aligns with listener retention patterns.
+.- Track Structure Use a medium-length format (3–4 minutes) with dynamic transitions.
+.- Avoid overly long intros or outros—streaming platforms reward immediate engagement.
+.- Artist Visibility Collaborations with artists across genres (e.g., J Balvin, Ed Sheeran) increase reach.
+.- Maintain consistent genre tagging to build algorithmic identity.
+.- Data Discipline Track performance metrics weekly: popularity, skip rate, completion rate.
+.- Use SQL or Python dashboards to monitor trends and adjust releases accordingly.
+.- Final Advice “Treat your music like a product: genre is your market, energy is your packaging, and popularity is your conversion rate.”
+.- Build with intention, measure with precision, and evolve with feedback.
 
 
 
