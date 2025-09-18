@@ -52,6 +52,9 @@ numeric_cols = ["BPM", "Energy", "Danceability", "Loudness_dB", "Liveness",
                 "Valence", "Length", "Acousticness", "Speechiness", "Popularity"]
 df[numeric_cols] = df[numeric_cols].apply(pd.to_numeric, errors="coerce")
 
+# Drop columns with no importance for our analysis
+df.drop(columns=["BPM", "Speechiness", "Acousticness","Danceability","Liveness","Length","Valence","Loudness_dB"], inplace=True)
+
 # Drop rows with missing critical values
 df = df.dropna(subset=["Track_name", "Artist_name", "Genre", "Energy", "Popularity"])
 
