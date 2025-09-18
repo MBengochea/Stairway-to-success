@@ -53,7 +53,7 @@ numeric_cols = ["BPM", "Energy", "Danceability", "Loudness_dB", "Liveness",
 df[numeric_cols] = df[numeric_cols].apply(pd.to_numeric, errors="coerce")
 
 # Drop columns with no importance for our analysis
-df.drop(columns=["BPM", "Speechiness", "Acousticness","Danceability","Liveness","Length","Valence","Loudness_dB"], inplace=True)
+df.drop(columns=["BPM", "Speechiness", "Acousticness","Danceability","Liveness","Valence","Loudness_dB"], inplace=True)
 
 # Drop rows with missing critical values
 df = df.dropna(subset=["Track_name", "Artist_name", "Genre", "Energy", "Popularity"])
@@ -131,36 +131,15 @@ Scalability: Ready for integration with SQL or visualization pipelines
 - Track length classification using `CASE`
 | Track Name                                      | Length | Length Category |
 |------------------------------------------------|--------|------------------|
-| no me conoce - remix                           | 309    | Long             |
+| no me conoce - remix                            | 309    | Long             |
 | china                                           | 302    | Long             |
 | otro trago - remix                              | 288    | Medium           |
 | soltera - remix                                 | 266    | Medium           |
 | no guidance (feat_ drake)                       | 261    | Medium           |
-| callaita                                        | 251    | Medium           |
-| la canción                                      | 243    | Medium           |
-| higher love                                     | 228    | Medium           |
-| otro trago                                      | 226    | Medium           |
-| never really over                               | 224    | Medium           |
-| que pretendes                                   | 222    | Medium           |
-| call you mine                                   | 218    | Medium           |
-| shallow                                         | 216    | Medium           |
-| happier                                         | 214    | Medium           |
 | it's you                                        | 213    | Medium           |
 | dance monkey                                    | 210    | Medium           |
 | takeaway                                        | 210    | Medium           |
 | cross me (feat_ chance the rapper & pnb rock)   | 206    | Medium           |
-| money in the grave (drake ft_ rick ross)        | 205    | Medium           |
-| te robaré                                       | 202    | Medium           |
-| how do you sleep?                               | 202    | Medium           |
-| the london (feat_ j_ cole & travis scott)       | 200    | Medium           |
-| fuck, i'm lonely (with anne-marie)              | 199    | Medium           |
-| beautiful people (feat_ khalid)                 | 198    | Medium           |
-| talk                                            | 198    | Medium           |
-| bad guy (with justin bieber)                    | 195    | Medium           |
-| bad guy                                         | 194    | Medium           |
-| con calma                                       | 193    | Medium           |
-| if i can't have you                             | 191    | Medium           |
-| señorita                                        | 191    | Medium           |
 | boyfriend (with social house)                   | 186    | Medium           |
 | loco contigo (feat_ j_ balvin & tyga)           | 185    | Medium           |
 | someone you loved                               | 182    | Medium           |
@@ -171,14 +150,7 @@ Scalability: Ready for integration with SQL or visualization pipelines
 | truth hurts                                     | 173    | Short            |
 | you need to calm down                           | 171    | Short            |
 | summer days (feat_ macklemore & patrick stump)  | 164    | Short            |
-| con altura                                      | 162    | Short            |
-| antisocial (with travis scott)                  | 162    | Short            |
-| lalala                                          | 161    | Short            |
-| sunflower - spider-man: into the spider-verse   | 158    | Short            |
-| old town road - remix                           | 157    | Short            |
-| piece of your heart                             | 153    | Short            |
-| ransom                                          | 131    | Short            |
-| panini                                          | 115    | Short            |
+
 
 - Standard deviation of popularity by genre
 | Genre             | Popularity StdDev |
