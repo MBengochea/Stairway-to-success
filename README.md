@@ -13,6 +13,50 @@ A data-driven exploration of the top 50 global music tracks using SQL and Python
 - Design and prepare a presentation summarizing the project, challenges, insights, and outcomes
 
 ---
+🧼 Python Data Cleaning Summary
+import pandas as pd
+
+# Load raw CSV
+df_raw = pd.read_csv("spotify_raw.csv")
+
+# Rename columns for consistency
+df = df_raw.rename(columns={
+    "Track.Name": "Track_name",
+    "Artist.Name": "Artist_name",
+    "Genre": "Genre",
+    "Beats.Per.Minute": "BPM",
+    "Energy": "Energy",
+    "Danceability": "Danceability",
+    "Loudness..dB..": "Loudness_dB",
+    "Liveness": "Liveness",
+    "Valence.": "Valence",
+    "Length.": "Length",
+    "Acousticness..": "Acousticness",
+    "Speechiness.": "Speechiness",
+    "Popularity": "Popularity"
+})
+
+# Strip whitespace and unify text casing
+df["Track_name"] = df["Track_name"].str.strip()
+df["Artist_name"] = df["Artist_name"].str.strip().str.lower()
+df["Genre"] = df["Genre"].str.strip().str.lower()
+
+# Remove duplicates
+df = df.drop_duplicates()
+
+# Convert Length from seconds to integer
+df["Length"] = df["Length"].astype(int)
+
+# Validate numeric columns
+numeric_cols = ["BPM", "Energy", "Danceability", "Loudness_dB", "Liveness",
+                "Valence", "Length", "Acousticness", "Speechiness", "Popularity"]
+df[numeric_cols] = df[numeric_cols].apply(pd.to_numeric, errors="coerce")
+
+# Drop rows with missing critical values
+df = df.dropna(subset=["Track_name", "Artist_name", "Genre", "Energy", "Popularity"])
+
+# Final structure preview
+df_cleaned = df[["Track_name", "Artist_name", "Genre", "Energy", "Length", "Popularity"]]
 
 ## 🗃️ Database Schema
 
@@ -23,11 +67,18 @@ A data-driven exploration of the top 50 global music tracks using SQL and Python
 - `Tracks_to_artists`: many-to-many relationship
 - `Artists_to_Genre`: artist classification
 
+✅ Clean Code Practices Applied
+Small Functions: Modular steps for renaming, formatting, and validation
+
+Descriptive Naming: Clear column labels and variable names
+
+Reproducibility: Can be rerun on similar datasets
+
+Scalability: Ready for integration with SQL or visualization pipelines
+
 **Entity Relationship Diagram:**
 [Artists] → [Tracks_to_artists] ← [Track] → [Genre] ↓ ↑ ↑ ↑ [Artists_to_Genre] ────────────────→───────────┘
 
-
----
 
 ## 🧮 SQL Insights
 
