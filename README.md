@@ -36,13 +36,14 @@ A data-driven exploration of the top 50 global music tracks using SQL and Python
 - Most energetic track per genre (with artist)
 - Track length classification using `CASE`
 - Standard deviation of popularity by genre
+- Top 10 Popularity songs by artist and genre
 - Artist with most tracks
 
 **Techniques Used:**
 - Common Table Expressions (CTEs)
 - Window functions (`RANK()`)
 - Clean joins and readable aliases
-- 
+
 ## 🧩 Challenges Faced
 - Normalizing artist-genre relationships
 - Resolving multi-artist tracks
@@ -77,32 +78,32 @@ Emerging artists can optimize track structure and genre alignment to improve str
 
 For a new band entering the streaming ecosystem, the data suggests a few strategic moves:
 
-🎯 Genre Positioning
+🎯 **Genre Positioning**
 Focus on genres with high average popularity: dance pop, reggaeton flow, and latin consistently outperform others.
 
 Align your sound with these genres or blend elements to increase discoverability.
 
-⚡ Energy Optimization
+⚡ **Energy Optimization**
 Tracks with energy scores above 70 dominate top positions.
 
 High-energy songs tend to be shorter (180–220 seconds), which aligns with listener retention patterns.
 
-📐 Track Structure
+📐 **Track Structure**
 Use a medium-length format (3–4 minutes) with dynamic transitions.
 
 Avoid overly long intros or outros—streaming platforms reward immediate engagement.
 
-🎤 Artist Visibility
+🎤 **Artist Visibility**
 Collaborations with artists across genres (e.g., J Balvin, Ed Sheeran) increase reach.
 
 Maintain consistent genre tagging to build algorithmic identity.
 
-📊 Data Discipline
+📊 **Data Discipline**
 Track performance metrics weekly: popularity, skip rate, completion rate.
 
 Use SQL or Python dashboards to monitor trends and adjust releases accordingly.
 
-🧠 Final Advice
+🧠 **Final Advice**
 “Treat your music like a product: genre is your market, energy is your packaging, and popularity is your conversion rate.”
 
 Build with intention, measure with precision, and evolve with feedback.
