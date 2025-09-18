@@ -1,5 +1,17 @@
 # 🎵 Stairway to Success — Spotify Data Analysis
 
+Business Idea
+Emerging artists and bands find it hard to make a breakthrough because:
+They lack data-driven insights into what makes a competitive song.
+They often rely solely on intuition or personal taste, or seek the advice of costly industry gatekeepers.
+Platforms like Spotify reward certain patterns (genre, length, release strategy and playlisting) that most newcomers do not fully understand.
+Our company aims to solve this problem by analysing trends in popular Spotify songs and translating them into actionable recommendations for newcomers.
+
+Target customers
+Independent musicians and bands
+Small labels and artist managers
+Music schools and academies that support new talent
+
 ## 📊 Project Overview
 A data-driven exploration of the top 50 global music tracks using SQL and Python. This project uncovers genre trends, energy levels, and popularity metrics to support emerging artists with actionable insights.
 
@@ -7,7 +19,7 @@ A data-driven exploration of the top 50 global music tracks using SQL and Python
 
 ## 🧠 Objectives
 - Execute SQL queries for insights using `JOIN`, `GROUP BY`, `ORDER BY`, `CASE`
-- Utilize SQL functions for summarization: `AVG`, `MAX`, `MIN`, `STDDEV`
+- Utilize SQL functions for summarization: `AVG`, `MAX`, `MIN`
 - Develop visualizations using Python libraries
 - Compile a comprehensive report of analysis and insights
 - Design and prepare a presentation summarizing the project, challenges, insights, and outcomes
@@ -151,32 +163,6 @@ Scalability: Ready for integration with SQL or visualization pipelines
 | you need to calm down                           | 171    | Short            |
 | summer days (feat_ macklemore & patrick stump)  | 164    | Short            |
 
-
-- Standard deviation of popularity by genre
-| Genre             | Popularity StdDev |
-|-------------------|-------------------|
-| canadian pop      | 4.5000            |
-| reggaeton flow    | 4.5000            |
-| dance pop         | 3.7997            |
-| electropop        | 3.0000            |
-| pop               | 2.6087            |
-| country rap       | 2.0000            |
-| reggaeton         | 2.0000            |
-| panamanian pop    | 2.0000            |
-| edm               | 1.8856            |
-| canadian hip hop  | 1.6997            |
-| dfw rap           | 1.5000            |
-| latin             | 1.1662            |
-| trap music        | 0.0000            |
-| escape room       | 0.0000            |
-| pop house         | 0.0000            |
-| australian pop    | 0.0000            |
-| atl hip hop       | 0.0000            |
-| big room          | 0.0000            |
-| boy band          | 0.0000            |
-| r&b en espanol    | 0.0000            |
-| brostep           | 0.0000            |
-
 - Top 10 Popularity songs by artist and genre
 | Track                                           | Artist           | Genre            | Popularity | Energy | Length |
 |------------------------------------------------|------------------|------------------|------------|--------|--------|
@@ -225,44 +211,30 @@ Scalability: Ready for integration with SQL or visualization pipelines
 ## 📋 Report Summary
 
 **Key Findings:**
-- Genres like *reggaeton flow* and *dance pop* dominate popularity
-- High-energy tracks correlate with shorter lengths in some genres
-- Artists like *Ed Sheeran* and *J Balvin* appear across multiple genres
-- Popularity varies widely within genres (high standard deviation)
+- Summary Report
+
+Key Findings:
+Genres like rap, reggaeton flow and dance pop dominate popularity
+High-energy tracks correlate with shorter lengths in some genres.
+Artists like Ed Sheeran and J Balvin appear across multiple genres, that means an artist can be successful in different genres.
+Business Implication: Emerging artists can optimize track structure and genre alignment to improve streaming performance.
+
+
 
 **Business Implication:**
-Emerging artists can optimize track structure and genre alignment to improve streaming performance.
+Strategies based on Analysis
 
-For a new band entering the streaming ecosystem, the data suggests a few strategic moves:
-
-🎯 **Genre Positioning**
-Focus on genres with high average popularity: dance pop, reggaeton flow, and latin consistently outperform others.
-
+Genre Positioning Focus on genres with high average popularity: dance pop, reggaeton flow, and latin consistently outperform others.
 Align your sound with these genres or blend elements to increase discoverability.
-
-⚡ **Energy Optimization**
-Tracks with energy scores above 70 dominate top positions.
-
+Energy Optimization Tracks with energy scores above 70 dominate top positions.
 High-energy songs tend to be shorter (180–220 seconds), which aligns with listener retention patterns.
-
-📐 **Track Structure**
-Use a medium-length format (3–4 minutes) with dynamic transitions.
-
+Track Structure Use a medium-length format (3–4 minutes) with dynamic transitions.
 Avoid overly long intros or outros—streaming platforms reward immediate engagement.
-
-🎤 **Artist Visibility**
-Collaborations with artists across genres (e.g., J Balvin, Ed Sheeran) increase reach.
-
+Artist Visibility Collaborations with artists across genres (e.g., J Balvin, Ed Sheeran) increase reach.
 Maintain consistent genre tagging to build algorithmic identity.
-
-📊 **Data Discipline**
-Track performance metrics weekly: popularity, skip rate, completion rate.
-
+Data Discipline Track performance metrics weekly: popularity, skip rate, completion rate.
 Use SQL or Python dashboards to monitor trends and adjust releases accordingly.
-
-🧠 **Final Advice**
-“Treat your music like a product: genre is your market, energy is your packaging, and popularity is your conversion rate.”
-
+Final Advice “Treat your music like a product: genre is your market, energy is your packaging, and popularity is your conversion rate.”
 Build with intention, measure with precision, and evolve with feedback.
 
 
