@@ -103,42 +103,13 @@ Scalability: Ready for integration with SQL or visualization pipelines
 |-------------------|----------------|
 | dfw rap           | 92.5000        |
 | trap music        | 92.0000        |
-| electropop        | 92.0000        |
-| reggaeton         | 91.0000        |
-| escape room       | 91.0000        |
-| pop house         | 91.0000        |
-| latin             | 89.8000        |
-| canadian hip hop  | 89.6667        |
-| country rap       | 89.0000        |
-| panamanian pop    | 89.0000        |
-| atl hip hop       | 89.0000        |
-| big room          | 89.0000        |
-| r&b en espanol    | 88.0000        |
-| brostep           | 88.0000        |
-| reggaeton flow    | 87.5000        |
-| edm               | 86.6667        |
-| pop               | 86.1667        |
-| dance pop         | 85.7500        |
-| australian pop    | 83.0000        |
-| boy band          | 80.0000        |
-| canadian pop      | 74.5000        |
+
 
 - Most energetic track per genre (with artist)
 | Genre            | Track                          | Artist           | Energy |
 |------------------|--------------------------------|------------------|--------|
 | latin            | con calma                      | daddy yankee     | 86     |
 | reggaeton flow   | china                          | anuel aa         | 81     |
-| dance pop        | boyfriend (with social house)  | ariana grande    | 80     |
-| panamanian pop   | otro trago - remix             | sech             | 79     |
-| pop              | how do you sleep?              | sam smith        | 68     |
-| dfw rap          | goodbyes (feat_ young thug)    | post malone      | 65     |
-| trap music       | ransom                         | lil tecca        | 64     |
-| country rap      | old town road - remix          | lil nas x        | 62     |
-| reggaeton        | callaita                       | bad bunny        | 62     |
-| canadian pop     | señorita                       | shawn mendes     | 55     |
-| edm              | takeaway                       | the chainsmokers | 51     |
-| canadian hip hop | money in the grave             | drake            | 50     |
-| electropop       | bad guy                        | billie eilish    | 43     |
 
 - Track length classification using `CASE`
 | Track Name                                      | Length | Length Category |
@@ -147,35 +118,12 @@ Scalability: Ready for integration with SQL or visualization pipelines
 | china                                           | 302    | Long             |
 | otro trago - remix                              | 288    | Medium           |
 | soltera - remix                                 | 266    | Medium           |
-| no guidance (feat_ drake)                       | 261    | Medium           |
-| it's you                                        | 213    | Medium           |
-| dance monkey                                    | 210    | Medium           |
-| takeaway                                        | 210    | Medium           |
-| cross me (feat_ chance the rapper & pnb rock)   | 206    | Medium           |
-| boyfriend (with social house)                   | 186    | Medium           |
-| loco contigo (feat_ j_ balvin & tyga)           | 185    | Medium           |
-| someone you loved                               | 182    | Medium           |
-| one thing right                                 | 182    | Medium           |
-| sucker                                          | 181    | Medium           |
-| 7 rings                                         | 179    | Short            |
-| goodbyes (feat_ young thug)                     | 175    | Short            |
-| truth hurts                                     | 173    | Short            |
-| you need to calm down                           | 171    | Short            |
-| summer days (feat_ macklemore & patrick stump)  | 164    | Short            |
 
 - Top 10 Popularity songs by artist and genre
 | Track                                           | Artist           | Genre            | Popularity | Energy | Length |
 |------------------------------------------------|------------------|------------------|------------|--------|--------|
 | bad guy                                        | billie eilish    | electropop       | 95         | 43     | 194    |
 | goodbyes (feat_ young thug)                    | post malone      | dfw rap          | 94         | 65     | 175    |
-| callaita                                       | bad bunny        | reggaeton        | 93         | 62     | 251    |
-| china                                          | anuel aa         | reggaeton flow   | 92         | 81     | 302    |
-| ransom                                         | lil tecca        | trap music       | 92         | 64     | 131    |
-| money in the grave (drake ft_ rick ross)       | drake            | canadian hip hop | 92         | 50     | 205    |
-| sunflower - spider-man: into the spider-verse  | post malone      | dfw rap          | 91         | 48     | 158    |
-| con calma                                      | daddy yankee     | latin            | 91         | 86     | 193    |
-| how do you sleep?                              | sam smith        | pop              | 90         | 68     | 202    |
-| la canción                                     | j balvin         | latin            | 90         | 65     | 243    |
 
 - Artist with most tracks
 | Artist       | Track Count |
