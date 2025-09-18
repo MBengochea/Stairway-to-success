@@ -23,7 +23,7 @@ CREATE TABLE `Genre` (
   PRIMARY KEY (`Genre_ID`)
 );
 
-CREATE TABLE `Traks_to_artists` (
+CREATE TABLE `Tracks_to_artists` (
   `id` INT,
   `Artist_ID` INT,
   `Track_ID` INT,
