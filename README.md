@@ -99,36 +99,10 @@ Scalability: Ready for integration with SQL or visualization pipelines
 
 **Queries Executed:**
 - Average popularity by genre
-  | Genre             | Avg_Popularity |
-|-------------------|----------------|
-| dfw rap           | 92.5000        |
-| trap music        | 92.0000        |
-
-
 - Most energetic track per genre (with artist)
-| Genre            | Track                          | Artist           | Energy |
-|------------------|--------------------------------|------------------|--------|
-| latin            | con calma                      | daddy yankee     | 86     |
-| reggaeton flow   | china                          | anuel aa         | 81     |
-
 - Track length classification using `CASE`
-| Track Name                                      | Length | Length Category |
-|------------------------------------------------|--------|------------------|
-| no me conoce - remix                            | 309    | Long             |
-| china                                           | 302    | Long             |
-| otro trago - remix                              | 288    | Medium           |
-| soltera - remix                                 | 266    | Medium           |
-
 - Top 10 Popularity songs by artist and genre
-| Track                                           | Artist           | Genre            | Popularity | Energy | Length |
-|------------------------------------------------|------------------|------------------|------------|--------|--------|
-| bad guy                                        | billie eilish    | electropop       | 95         | 43     | 194    |
-| goodbyes (feat_ young thug)                    | post malone      | dfw rap          | 94         | 65     | 175    |
-
 - Artist with most tracks
-| Artist       | Track Count |
-|--------------|-------------|
-| post malone  | 2           |
 
 **Techniques Used:**
 - Common Table Expressions (CTEs)
