@@ -93,3 +93,26 @@ SELECT * FROM ArtistTrackCount
 ORDER BY Track_Count DESC
 LIMIT 1;
 
+#7
+SELECT 
+    genre,
+    artist_name,
+    ROUND(AVG(popularity),1) AS avg_popularity,
+    COUNT(track_name) AS total_tracks
+FROM top_hits_clean
+GROUP BY genre, artist_name
+HAVING COUNT(track_name) > 1
+ORDER BY avg_popularity DESC, total_tracks DESC
+LIMIT 5;
+#8
+SELECT 
+    CASE 
+        WHEN Length < 180 THEN 'Short'
+        WHEN Length BETWEEN 180 AND 300 THEN 'Medium'
+        ELSE 'Long'
+    END AS Length_Category,
+    ROUND(AVG(Popularity), 2) AS Avg_Popularity,
+    COUNT(*) AS Track_Count
+FROM Track
+GROUP BY Length_Category
+ORDER BY Avg_Popularity DESC;
