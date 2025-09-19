@@ -24,22 +24,19 @@ WITH GenreEnergy AS (
     SELECT 
         g.Genre_name AS Genre,
         t.Track_name AS Track,
-        a.Artist_name AS Artist,
         t.Energy,
-        RANK() OVER (PARTITION BY g.Genre_name ORDER BY t.Energy DESC) AS EnergyRank
+        ROW_NUMBER() OVER (PARTITION BY g.Genre_name ORDER BY t.Energy DESC) AS EnergyRank
     FROM Track t
     JOIN Genre g ON t.Genre_ID = g.Genre_ID
-    JOIN Tracks_to_artists ta ON t.Track_ID = ta.Track_ID
-    JOIN Artists a ON ta.Artist_ID = a.Artist_ID
 )
 SELECT 
     Genre,
     Track,
-    Artist,
     Energy
 FROM GenreEnergy
 WHERE EnergyRank = 1
 ORDER BY Energy DESC;
+
 
 -- 3. Track length classification using CASE
 SELECT 
@@ -53,17 +50,6 @@ SELECT
 FROM Track
 ORDER BY Length DESC;
 
--- 4. Standard deviation of popularity by genre
-WITH GenreStats AS (
-    SELECT 
-        g.Genre_name AS Genre,
-        STDDEV(t.Popularity) AS Popularity_StdDev
-    FROM Track t
-    JOIN Genre g ON t.Genre_ID = g.Genre_ID
-    GROUP BY g.Genre_name
-)
-SELECT * FROM GenreStats
-ORDER BY Popularity_StdDev DESC;
 
 -- 5. Top 10 popularity songs by artist and genre
 SELECT 
@@ -116,3 +102,35 @@ SELECT
 FROM Track
 GROUP BY Length_Category
 ORDER BY Avg_Popularity DESC;
+
+# canadian pop analysis
+SELECT 
+    CASE 
+        WHEN t.Popularity > 75 THEN 'More Popular'
+        ELSE 'Less Popular'
+    END AS Popularity_Group,
+    ROUND(AVG(t.Energy), 2) AS Avg_Energy,
+    ROUND(AVG(t.Length), 2) AS Avg_Length,
+    COUNT(*) AS Track_Count
+FROM Track t
+JOIN Genre g ON t.Genre_ID = g.Genre_ID
+WHERE g.Genre_name = 'canadian pop'
+GROUP BY Popularity_Group
+ORDER BY Avg_Energy DESC;
+
+-- #2nd part
+SELECT 
+    t.Track_name,
+    t.Energy,
+    t.Length
+FROM Track t
+JOIN Genre g ON t.Genre_ID = g.Genre_ID
+WHERE g.Genre_name = 'canadian pop';
+
+SELECT 
+    t.Track_name,
+    t.Popularity
+FROM Track t
+JOIN Genre g ON t.Genre_ID = g.Genre_ID
+WHERE g.Genre_name = 'canadian pop'
+  AND t.Track_name IN ('Señorita', 'If I Can\'t Have You');
