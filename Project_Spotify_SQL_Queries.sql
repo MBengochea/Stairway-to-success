@@ -50,6 +50,11 @@ SELECT
 FROM Track
 ORDER BY Length DESC;
 
+-- 4.1 # Calculate mean track length
+SELECT 
+    ROUND(AVG(Length), 2) AS Mean_Length_Seconds
+FROM Track;
+
 
 -- 5. Top 10 popularity songs by artist and genre
 SELECT 
