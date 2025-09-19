@@ -19,7 +19,7 @@ A data-driven exploration of the top 50 global music tracks using SQL and Python
 
 ## 🧠 Objectives
 - Execute SQL queries for insights using `JOIN`, `GROUP BY`, `ORDER BY`, `CASE`
-- Utilize SQL functions for summarization: `AVG`, `MAX`, `MIN`
+- Utilize SQL functions for summarization: `AVG`, `MAX`, `MIN`, 'DEVSTD'
 - Develop visualizations using Python libraries
 - Compile a comprehensive report of analysis and insights
 - Design and prepare a presentation summarizing the project, challenges, insights, and outcomes
@@ -102,7 +102,7 @@ Scalability: Ready for integration with SQL or visualization pipelines
 - Most energetic track per genre (with artist)
 - Track length classification using `CASE`
 - Top 10 Popularity songs by artist and genre
-- Artist with most tracks
+- Std Deviation of popularity and isolation of genre for analysis
 
 **Techniques Used:**
 - Common Table Expressions (CTEs)
